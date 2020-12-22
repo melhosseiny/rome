@@ -1,0 +1,26 @@
+{
+  "name": "Rome",
+  "component": false,
+  "license_url": null,
+  "about_url": null,
+  "authors": null,
+  "theme_version": null,
+  "minimum_discourse_version": null,
+  "maximum_discourse_version": null,
+  "assets": {
+  },
+  "color_schemes": {
+    "Rome": {
+      "primary": "5f4b32",
+      "secondary": "ffffff",
+      "tertiary": "e36056",
+      "quaternary": "6380ad",
+      "highlight": "ffdf73",
+      "header_background": "ffffff",
+      "header_primary": "5f4b32",
+      "danger": "e36056",
+      "success": "61b67c"
+    }
+  },
+  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
+}

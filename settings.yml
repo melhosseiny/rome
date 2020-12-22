@@ -1,0 +1,3 @@
+layout:
+  type: bool
+  default: true

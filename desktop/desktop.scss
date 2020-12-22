@@ -1,0 +1,7 @@
+// base: categories-only
+.category-list {
+  li {
+    box-sizing: border-box;
+    width: calc(33.33% - 16px);
+  }
+}
