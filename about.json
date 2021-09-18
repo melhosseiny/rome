@@ -8,18 +8,21 @@
   "minimum_discourse_version": null,
   "maximum_discourse_version": null,
   "assets": {
+    "temple": "assets/temple.png"
   },
   "color_schemes": {
     "Rome": {
       "primary": "5f4b32",
       "secondary": "ffffff",
       "tertiary": "e36056",
+      "tertiary-low": "ffefb9",
       "quaternary": "6380ad",
       "highlight": "ffdf73",
       "header_background": "ffffff",
       "header_primary": "5f4b32",
       "danger": "e36056",
-      "success": "61b67c"
+      "success": "61b67c",
+      "love": "e36056"
     }
   },
   "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
