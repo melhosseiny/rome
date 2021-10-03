@@ -1,7 +1,3 @@
-layout:
-  type: bool
-  default: true
-
 sidebar_show_likes:
    type: bool
    default: true
