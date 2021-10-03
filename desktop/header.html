@@ -12,7 +12,7 @@
       fetch("https://polite-dove-74.deno.dev/index.json")
         .then(response => response.json())
         .then(quotes => {
-          const rand = Math.floor(Math.random() * 3);
+          const rand = Math.floor(Math.random() * quotes.length);
           component.set('quote', quotes[rand]);
         });
 
@@ -37,10 +37,7 @@
 </script>
 
 <!-- Custom sidebar template -->
-<script
-  type="text/x-handlebars"
-  data-template-name="/connectors/discovery-below/sidebar"
->
+<script type="text/x-handlebars" data-template-name="/connectors/discovery-below/sidebar">
   <div class="dbook-sidebar">
     {{#if quote}}
     <p class="quote">{{quote}}</p>

@@ -1,18 +1,13 @@
 @import "variables";
 
-// base:topic-post
-.topic-post {
-  width: 800px;
-}
-
-// base: categories-only
+// base:category-list
 .category-list {
   margin: 0;
   li {
     width: calc(33.33% - 16px);
-  }
-  .item {
-    width: calc(100% - 16px);
+    .item {
+      width: calc(100% - 16px);
+    }
   }
 }
 
@@ -24,39 +19,21 @@
   }
 }
 
-.category-boxes, .category-boxes-with-topics {
-  .category-box {
-    background-color: #fff;
-    margin: 0 8px 8px 0;
-    border-left-width: 8px;
-    border-left-style: groove;
-    .category-box-inner {
-      border: 0;
-      h3 {
-        font-size: 1.17em;
-      }
-      h3, .d-icon {
-        color: var(--tertiary);
-      }
-      .description {
-        color: var(--primary);
-      }
-    }
+// base:compose
+.open .grippie {
+  background-color: transparent;
+  &:before {
+    border-top-color: var(--primary);
   }
 }
 
-.category-boxes .category-box {
-  width: calc(25% - 6px);
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
+.composer-popup {
+  box-shadow: none;
 }
 
-.category-boxes-with-topics .category-box {
-  width: calc(33.33% - 6px);
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
+// topic-post
+.topic-post {
+  width: 800px;
 }
 
 // sidebar
@@ -131,23 +108,23 @@ body[class*="category-"]:not(.archetype-regular):not(.archetype-banner) {
   }
 }
 
+// sidebar
 .sidebar {
   image-rendering: crisp-edges;
   image-rendering: pixelated;
   background: url($temple) center 25px no-repeat;
   background-size: 90px;
-  display: none;
+  display: flex;
   position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 24px;
   @media screen and (max-width: 920px) {
     display: none;
   }
   .visitor {
     display: none;
   }
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 24px;
   .dbook-sidebar {
     flex: 1;
     flex-direction: column;
@@ -198,15 +175,11 @@ body[class*="category-"]:not(.archetype-regular):not(.archetype-banner) {
   }
 }
 
-.anon {
-  .sidebar {
-    .visitor {
-      display: block;
-      button {
-        display: block;
-        margin-top: 1em;
-      }
-    }
+.anon .sidebar .visitor {
+  display: block;
+  button {
+    display: block;
+    margin-top: 1em;
   }
 }
 
@@ -222,12 +195,10 @@ body[class*="category-"]:not(.archetype-regular):not(.archetype-banner) {
     font-size: 1em;
     font-family: $base-font-family;
   }
-  p {
-    margin-top: 0;
-  }
   p.quote {
-    border-bottom: 1px solid var(--primary);
+    margin-top: 0;
     padding-bottom: 1em;
+    border-bottom: 1px solid var(--primary);
     font-weight: 900;
     &:first-letter {
       color: var(--tertiary);
@@ -242,25 +213,18 @@ body[class*="category-"]:not(.archetype-regular):not(.archetype-banner) {
   .badges {
     display: block;
     margin-bottom: 1em;
-    .badge-type-1 {
-      .d-icon {
-        color: var(--gold);
-      }
+    .badge-type-1 .d-icon {
+      color: var(--gold);
     }
-    .badge-type-2 {
-      .d-icon {
-        color: var(--silver);
-      }
+    .badge-type-2 .d-icon {
+      color: var(--silver);
     }
-    .badge-type-3 {
-      .d-icon {
-        color: var(--bronze);
-      }
+    .badge-type-3 .d-icon {
+      color: var(--bronze);
     }
   }
   .likes {
     padding: 1em 0;
-
     .d-icon-heart {
       color: var(--tertiary);
       font-size: 0.9em;
