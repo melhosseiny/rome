@@ -1,0 +1,18 @@
+// type
+$base-font-family: 'Vollkorn', 'Helvetica Neue', helvetica, arial, sans-serif;
+$alt-font-family: 'Open Sans';
+
+// color
+$background-color: #fbf0d9;
+$alt-text-color: rgba(95,75,50,0.5);
+
+// frame
+$color-frame: rgba(0,0,0,0.25);
+$color-frame-outer: $alt-text-color;
+$frame-size: 8px;
+$frame-border-size: 1px;
+$frame-border-size-neg: -1px;
+$frame-border-style: solid;
+
+// shadow
+$shadow: 3px 3px 0 0 rgba(0,0,0,0.1);

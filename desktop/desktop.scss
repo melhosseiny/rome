@@ -1,10 +1,4 @@
-// frame
-$color-frame: rgba(0,0,0,0.25);
-$color-frame-outer: rgba(95, 75, 50,0.5);
-$frame-size: 8px;
-$frame-border-size: 1px;
-$frame-border-size-neg: -1px;
-$frame-border-style: solid;
+@import "variables";
 
 // base:topic-post
 .topic-post {
@@ -15,12 +9,53 @@ $frame-border-style: solid;
 .category-list {
   margin: 0;
   li {
-    box-sizing: border-box;
     width: calc(33.33% - 16px);
   }
   .item {
-    box-sizing: border-box;
     width: calc(100% - 16px);
+  }
+}
+
+.categories-and-latest, .categories-and-top {
+  .category-list {
+    li {
+      width: auto;
+    }
+  }
+}
+
+.category-boxes, .category-boxes-with-topics {
+  .category-box {
+    background-color: #fff;
+    margin: 0 8px 8px 0;
+    border-left-width: 8px;
+    border-left-style: groove;
+    .category-box-inner {
+      border: 0;
+      h3 {
+        font-size: 1.17em;
+      }
+      h3, .d-icon {
+        color: var(--tertiary);
+      }
+      .description {
+        color: var(--primary);
+      }
+    }
+  }
+}
+
+.category-boxes .category-box {
+  width: calc(25% - 6px);
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.category-boxes-with-topics .category-box {
+  width: calc(33.33% - 6px);
+  &:nth-child(3n) {
+    margin-right: 0;
   }
 }
 
@@ -97,6 +132,7 @@ body[class*="category-"]:not(.archetype-regular):not(.archetype-banner) {
 }
 
 .sidebar {
+  image-rendering: crisp-edges;
   image-rendering: pixelated;
   background: url($temple) center 25px no-repeat;
   background-size: 90px;
@@ -178,9 +214,9 @@ body[class*="category-"]:not(.archetype-regular):not(.archetype-banner) {
   display: none;
   padding: 1em;
   margin-bottom: 0.5em;
-  color: var(--primary, $primary);
+  color: var(--primary);
   .d-icon {
-    color: var(--primary-high, $primary-high);
+    color: var(--primary-high);
   }
   h3 {
     font-size: 1em;
@@ -189,56 +225,44 @@ body[class*="category-"]:not(.archetype-regular):not(.archetype-banner) {
   p {
     margin-top: 0;
   }
-  p:first-child {
+  p.quote {
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 1em;
     font-weight: 900;
-  }
-  p:first-child::after {
-    content: "\221e\221e\221e";
-    color: var(--tertiary, $tertiary);
-    font-weight: 900;
-    padding-left: 8px;
-    letter-spacing: -6px;
-  }
-  p:first-child:first-letter {
-    color: #e36056;
-    float: left;
-    font-size: 3em;
-    line-height: 37px;
-    padding-top: 4px;
-    padding-right: 8px;
-    padding-left: 3px;
+    &:first-letter {
+      color: var(--tertiary);
+      float: left;
+      font-size: 3em;
+      line-height: 37px;
+      padding-top: 4px;
+      padding-right: 8px;
+      padding-left: 3px;
+    }
   }
   .badges {
     display: block;
     margin-bottom: 1em;
-    .user-badge {
-      border-color: transparent;
-      border-radius: 4px;
-      margin-right: 2px;
-    }
     .badge-type-1 {
       .d-icon {
-        color: var(--gold, $gold);
+        color: var(--gold);
       }
     }
     .badge-type-2 {
       .d-icon {
-        color: var(--silver, $silver);
+        color: var(--silver);
       }
     }
     .badge-type-3 {
       .d-icon {
-        color: var(--bronze, $bronze);
+        color: var(--bronze);
       }
     }
   }
   .likes {
-    border-bottom: 1px solid var(--primary, $primary);
     padding: 1em 0;
-    margin-bottom: 1em;
 
     .d-icon-heart {
-      color: var(--tertiary, $tertiary);
+      color: var(--tertiary);
       font-size: 0.9em;
     }
     .user-stat {

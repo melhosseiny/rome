@@ -16,10 +16,8 @@
           component.set('quote', quotes[rand]);
         });
 
-      ajax("/u/" + username + "/summary.json").then (function(result){
-
+      ajax("/u/" + username + "/summary.json").then(function(result) {
         const stinkinBadges = [];
-
         const userLikesReceived = result.user_summary.likes_received;
         const userLikesGiven = result.user_summary.likes_given;
         if (result.badges) {
@@ -33,11 +31,8 @@
         component.set('stinkinBadges', stinkinBadges);
         component.set('userName', api.getCurrentUser().name);
         component.set('user', api.getCurrentUser().username);
-
       });
-
     }
-
   });
 </script>
 
@@ -47,7 +42,9 @@
   data-template-name="/connectors/discovery-below/sidebar"
 >
   <div class="dbook-sidebar">
-    <p>{{quote}}</p>
+    {{#if quote}}
+    <p class="quote">{{quote}}</p>
+    {{/if}}
     {{#if user}}
     <a class="sidebar-link" href="/my/summary">{{#if userName}} {{userName}} {{/if}}</a>
     {{/if}}

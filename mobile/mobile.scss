@@ -14,10 +14,22 @@
   padding: 0 8px;
 }
 
+#topic-progress {
+  border-color: var(--tertiary);
+  .bg {
+    border-color: var(--tertiary);
+  }
+}
+
+.topic-status-info, .topic-timer-info {
+  border-color: transparent;
+}
+
 // base:topic-list
 .topic-list {
   margin: 0;
   .topic-list-item {
+    align-items: start;
     .right {
       margin-left: 8px;
     }
@@ -32,8 +44,6 @@
     }
     .posts-map {
       font-size: 1em;
-      display: -webkit-box;
-      display: -webkit-flex;
       display: flex;
     }
     .num.posts a {
@@ -49,13 +59,15 @@
 .category-list {
   justify-content: center;
   li {
-    box-sizing: border-box;
     width: calc(100% - 16px);
     margin-right: 0;
   }
-
   .item {
-    box-sizing: border-box;
     width: calc(100% - 16px);
   }
+}
+
+// base:search
+.search-container .search-advanced .search-results {
+  padding: 0;
 }
