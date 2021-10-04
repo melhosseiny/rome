@@ -1,7 +1,7 @@
 {
   "name": "Rome",
   "component": false,
-  "about_url": null,
+  "about_url": "https://meta.discourse.org/t/rome-a-theme-inspired-by-ancient-roman-manuscripts/205144",
   "license_url": "https://github.com/melhosseiny/rome/blob/main/LICENSE",
   "authors": "https://github.com/melhosseiny",
   "assets": {
